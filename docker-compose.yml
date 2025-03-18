@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=1234
+      - MYSQL_DATABASE=root
     ports:
       - 3306:3306
     command: --init-file /data/application/init.sql
@@ -24,7 +24,7 @@ services:
       SPRING_APPLICATION_JSON: '{
         "spring.datasource.url"  : "jdbc:mysql://mysqldb:3306/correios?useSSL=false",
         "spring.datasource.username" : "root",
-        "spring.datasource.password" : "1234",
+        "spring.datasource.password" : "root",
         "spring.jpa.hibernate.ddl-auto" : "update"
       }'
     volumes:
